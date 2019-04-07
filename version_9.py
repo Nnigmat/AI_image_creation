@@ -5,7 +5,7 @@ from good_colors import good_colors
 from multiprocessing import Process
 import datetime
 
-image = 'putin.png'
+image = 'noise-tiled.png'
 num_populations = 20
 num_generations = 10
 blur = False
