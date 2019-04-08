@@ -63,13 +63,16 @@ if __name__ == '__main__':
         im = ImageOps.invert(im)
 
     im2arr = np.array(im)
-    print('[+] Create numpy array of image')
+    print('[+] Create numpy array of image\n')
     mother, father = im2arr, None
 
     counter = 0 
     for i in range(num_generations):
+        print(f'[+] {i+1} generation.')
         childs = generate_childrens(mother, father)
         mother, father = fitness(childs)
+        print('\n')
+
 
     im = Image.fromarray(mother.astype('uint8'))
     print(f'Result is {datetime.datetime.now()-start}')
